@@ -1,0 +1,13 @@
+# Document:
+# http://simiki.org/docs/configuration.html
+
+url: http://treasure1.github.io/
+title: 我是wiki
+keywords: wiki
+description: 真的是要气死我了
+author: 大白菜
+deploy:
+  - type: git
+    remote: origin
+    branch: master
+  

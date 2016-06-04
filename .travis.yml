@@ -1,0 +1,26 @@
+language: python
+python:
+- '2.7'
+install:
+- sudo pip install fabric
+- sudo pip install ghp-import
+- sudo pip install simiki
+script:
+- simiki g
+- fab deploy
+branches:
+  only:
+  - Source
+before_install:
+- openssl aes-256-cbc -K $encrypted_5f3c7fc82c89_key -iv $encrypted_5f3c7fc82c89_iv
+  -in .travis/id_rsa.enc -out ~\/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
+- git config --global user.name "furao"
+- git config --global user.email 327985496@qq.com
+- git config --global push.default simple
+- git remote set-url --push origin git@github.com:Treasure1/Treasure1.github.io.git
+- git fetch origin master:refs/remotes/origin/master
+- git branch master origin/master
