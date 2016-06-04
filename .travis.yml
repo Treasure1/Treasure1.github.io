@@ -2,9 +2,9 @@ language: python
 python:
 - '2.7'
 install:
-- sudo pip install fabric
-- sudo pip install ghp-import
-- sudo pip install simiki
+- pip install fabric
+- pip install ghp-import
+- pip install simiki
 script:
 - simiki g
 - fab deploy
