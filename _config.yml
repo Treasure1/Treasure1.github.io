@@ -6,6 +6,7 @@ title: 我是wiki
 keywords: wiki
 description: 真的是要气死我了
 author: 大白菜
+theme: simple
 deploy:
   - type: git
     remote: origin
