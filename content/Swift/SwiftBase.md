@@ -1,6 +1,5 @@
 ---
 title: "Swift基础语法"
-layout: page
 data: 2016-06-11 00:00:00
 ---
 
